@@ -2005,7 +2005,7 @@ XHCI::_LinkDescriptorForPipe(xhci_td *descriptor, xhci_endpoint *endpoint)
 		last = XHCI_ENDPOINT_RING_SIZE - 1;
 	uint32 next = eventdata + 1;
 
-	TRACE("link descriptor for pipe: current %d, next %d\n", current, next);
+	TRACE("link descriptor for pipe: current %lu, next %lu\n", current, next);
 
 	// Add a Link TRB to the end of the descriptor.
 	phys_addr_t addr = endpoint->trb_addr + eventdata * sizeof(xhci_trb);
